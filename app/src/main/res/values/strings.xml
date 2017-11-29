@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">GolfCounter</string>
+
+    <string name="PlayerB">Player B</string>
+    <string name="PlayerA">Player A</string>
+    <string name="TripleBogey">Triple bogey (+3)</string>
+    <string name="DoubleBogey">Double bogey (+2)</string>
+    <string name="Bogey">Bogey (+1)</string>
+    <string name="Birdie">Birdie (-1)</string>
+    <string name="Eagle">Eagle (-2)</string>
+    <string name="Albatross">Albatross (-3)</string>
+    <string name="Reset">Reset</string>
+
 </resources>
