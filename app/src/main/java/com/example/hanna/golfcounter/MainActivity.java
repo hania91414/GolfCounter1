@@ -9,11 +9,21 @@ public class MainActivity extends AppCompatActivity {
     int scoreTeamA = 0;
     int scoreTeamB = 0;
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         displayForTeamA(scoreTeamA);
         displayForTeamB(scoreTeamB);
+
+        if (savedInstanceState != null) {
+        // Restore value of members from saved state
+            scoreTeamA = savedInstanceState.getInt("scoreTeamA");
+            scoreTeamB = savedInstanceState.getInt("scoreTeamB");
+        } else {
+            scoreTeamA = 0;
+            scoreTeamB = 0;
+        }
 
     }
 
@@ -103,6 +113,20 @@ public class MainActivity extends AppCompatActivity {
     public void displayForTeamB(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(score));
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("scoreTeamA",scoreTeamA);
+        outState.putInt("scoreTeamB",scoreTeamB);
+    }
+
+    @Override
+    protected void onRestoreInstanceState (Bundle savedInstanceState){
+        super.onRestoreInstanceState(savedInstanceState);
+        scoreTeamA=savedInstanceState.getInt("scoreTeamA");
+        scoreTeamB=savedInstanceState.getInt("scoreTeamB");
     }
 
 }
