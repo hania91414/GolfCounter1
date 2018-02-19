@@ -10,7 +10,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EEEEEE">
+    android:background="@color/background">
 
     <LinearLayout
         android:id="@+id/layout_scores"
@@ -31,10 +31,10 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
-                android:padding="10dp"
+                android:padding="@dimen/padding_medium"
                 android:text="@string/PlayerA"
-                android:textColor="#616161"
-                android:textSize="14sp" />
+                android:textColor="@color/text_color1"
+                android:textSize="@dimen/textMedium" />
 
             <TextView
                 android:id="@+id/team_a_score"
@@ -42,10 +42,10 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
-                android:padding="2dp"
-                android:text="0"
-                android:textColor="#000000"
-                android:textSize="50sp" />
+                android:padding="@dimen/padding_small"
+                android:text="@string/points_start"
+                android:textColor="@color/color_numbers"
+                android:textSize="@dimen/textBig" />
 
             <Button
                 android:id="@+id/button1"
@@ -106,14 +106,13 @@
                 android:id="@+id/button6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="@dimen/ButtonMarginLR"
                 android:layout_marginRight="@dimen/ButtonMarginLR"
                 android:layout_marginTop="@dimen/ButtonMarginBig"
-                android:layout_marginBottom="10dp"
                 android:background="@drawable/button_style2"
                 android:onClick="subsThreeTeamA"
                 android:text="@string/Albatross" />
-
 
         </LinearLayout>
 
@@ -121,7 +120,7 @@
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/margin_medium"
             android:background="@android:color/darker_gray"
             android:gravity="center_horizontal" />
 
@@ -138,10 +137,10 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
-                android:padding="10dp"
+                android:padding="@dimen/margin_medium"
                 android:text="@string/PlayerB"
-                android:textColor="#616161"
-                android:textSize="14sp" />
+                android:textColor="@color/text_color1"
+                android:textSize="@dimen/textMedium" />
 
             <TextView
                 android:id="@+id/team_b_score"
@@ -149,10 +148,10 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
-                android:padding="2dp"
-                android:text="0"
-                android:textColor="#000000"
-                android:textSize="50sp" />
+                android:padding="@dimen/padding_small"
+                android:text="@string/points_start"
+                android:textColor="@color/color_numbers"
+                android:textSize="@dimen/textBig" />
 
             <Button
                 android:id="@+id/button1B"
@@ -213,14 +212,13 @@
                 android:id="@+id/button6B"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_medium"
                 android:layout_marginLeft="@dimen/ButtonMarginLR"
                 android:layout_marginRight="@dimen/ButtonMarginLR"
                 android:layout_marginTop="@dimen/ButtonMarginBig"
-                android:layout_marginBottom="10dp"
                 android:background="@drawable/button_style2"
                 android:onClick="subsThreeTeamB"
                 android:text="@string/Albatross" />
-
         </LinearLayout>
     </LinearLayout>
 
@@ -232,7 +230,6 @@
         android:layout_centerHorizontal="true"
         android:onClick="reset"
         android:text="@string/Reset" />
-
 
 </RelativeLayout>
 

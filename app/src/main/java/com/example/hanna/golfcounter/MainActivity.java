@@ -13,16 +13,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        displayForTeamA(scoreTeamA);
-        displayForTeamB(scoreTeamB);
 
         if (savedInstanceState != null) {
-        // Restore value of members from saved state
+            // Restore value of members from saved state
             scoreTeamA = savedInstanceState.getInt("scoreTeamA");
             scoreTeamB = savedInstanceState.getInt("scoreTeamB");
+            displayForTeamA(scoreTeamA);
+            displayForTeamB(scoreTeamB);
         } else {
             scoreTeamA = 0;
             scoreTeamB = 0;
+            displayForTeamA(scoreTeamA);
+            displayForTeamB(scoreTeamB);
         }
 
     }
@@ -96,14 +98,12 @@ public class MainActivity extends AppCompatActivity {
         scoreTeamA = 0;
         displayForTeamB(scoreTeamB);
         displayForTeamA(scoreTeamA);
-
-
     }
     /**
      * Displays the given score for Team A.
      */
     public void displayForTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
+        TextView scoreView = findViewById(R.id.team_a_score);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Team B.
      */
     public void displayForTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
+        TextView scoreView = findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(score));
     }
 

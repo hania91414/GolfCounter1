@@ -10,5 +10,7 @@
     <string name="Eagle">Eagle (-2)</string>
     <string name="Albatross">Albatross (-3)</string>
     <string name="Reset">Reset</string>
+    <string name="points_start">0</string>
+
 
 </resources>

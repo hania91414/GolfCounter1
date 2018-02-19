@@ -2,5 +2,10 @@
 <resources>
     <dimen name="ButtonMarginLR">24dp</dimen>
     <dimen name="ButtonMarginSmall">4dp</dimen>
+    <dimen name="margin_medium">10dp</dimen>
     <dimen name="ButtonMarginBig">8dp</dimen>
+    <dimen name="textBig">50sp</dimen>
+    <dimen name="textMedium">14sp</dimen>
+    <dimen name="padding_small">2dp</dimen>
+    <dimen name="padding_medium">10dp</dimen>
 </resources>
